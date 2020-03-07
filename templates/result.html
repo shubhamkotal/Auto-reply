@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+	body{
+		background-size: 100% ;
+		background-repeat: no-repeat;
+		background-image: url('https://miro.medium.com/max/3960/1*wePl7h5pIOWFayxMTsGTxQ.jpeg');
+	}
+	 </style>
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			AI-Bot
+		</div>
+		<h2>Your Vitual Chatbot</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Thanks for feedback, will make sure it will not happen again</h2>
+	{% elif prediction == 2%}
+	<h2 style="color:blue;"> Will forward your feedback to resto </h2>
+	{% elif prediction == 3%}
+	<h2 style="color:blue;"> can you send a picture of it </h2>
+	{% elif prediction == 4%}
+	<h2 style="color:blue;"> sorry for inconvenice </h2>
+	{% elif prediction == 5%}
+	<h2 style="color:blue;"> we apologize for the inconvenience </h2>
+	{% elif prediction == 6%}
+	<h2 style="color:blue;"> what item did you received?</h2>
+	{% elif prediction == 7%}
+	<h2 style="color:blue;"> which item is missing? </h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;"> Thanks for the compliment </h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
